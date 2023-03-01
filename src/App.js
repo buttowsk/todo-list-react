@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import {Container, Content} from "./styles";
+import { Button } from "./components/Button";
+import { Input } from "./components/Input";
+import { useState } from "react";
+import { List } from "./components/List";
 
 function App() {
+  const [tarefa, setTarefa] = useState("")
+  const [descricao, setDescricao] = useState("")
+  const [listaTarefas, setListaTarefas] = useState([])
+
+  const handleAdicionar = () => {
+    setListaTarefas([{tarefa: tarefa, desc: descricao}, ...listaTarefas])
+    console.log(listaTarefas)
+  }
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Content >
+        <Input value={tarefa} onChange={(e) => setTarefa(e.target.event)} placeholder={"Tarefa"}/>
+        <Input value={descricao} onChange={(e) => setDescricao(e.target.event)} placeholder={"Descrição da Tarefa"}/>
+        <Button label={"Adicionar"} onClick={handleAdicionar}/>
+        <List>
+          {listaTarefas.map( i => 
+            <>
+            <h1>{i.tarefa}</h1>
+            <p>{i.descricao}</p>
+            </>
+          )}
+        </List>
+      </Content>
+    </Container>
   );
 }
 
