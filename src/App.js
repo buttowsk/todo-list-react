@@ -1,38 +1,43 @@
-import {Container, Content} from "./styles";
+import {Container, Column, Content} from "./styles"
 import { Button } from "./components/Button";
 import { Input } from "./components/Input";
-import { useState } from "react";
-import { List } from "./components/List";
+import {useState} from "react";
+import {Task} from "./components/Task";
+import {Timer} from "./components/Timer";
 
 function App() {
-  const [tarefa, setTarefa] = useState("")
-  const [descricao, setDescricao] = useState("")
-  const [listaTarefas, setListaTarefas] = useState([])
 
-  const handleAdicionar = () => {
-    setListaTarefas([{tarefa: tarefa, desc: descricao}, ...listaTarefas])
-    console.log(listaTarefas)
+  const [task, setTask] = useState("")
+  const [taskDesc, setTaskDesc] = useState("")
+  const [tasks, setTasks] = useState([])
+  const [deadline, setDeadline] = useState('')
+  const handleAddTask = () => {
+    setTasks([{task: task, desc: taskDesc, timeLimit: deadline} , ...tasks])
+    console.log(tasks)
+    setTaskDesc('')
+    setTask('')
+    setDeadline('')
   }
-
-
-
 
 
 
   return (
     <Container>
       <Content >
-        <Input value={tarefa} onChange={(e) => setTarefa(e.target.event)} placeholder={"Tarefa"}/>
-        <Input value={descricao} onChange={(e) => setDescricao(e.target.event)} placeholder={"Descrição da Tarefa"}/>
-        <Button label={"Adicionar"} onClick={handleAdicionar}/>
-        <List>
-          {listaTarefas.map( i => 
-            <>
-            <h1>{i.tarefa}</h1>
-            <p>{i.descricao}</p>
+
+        <Input placeholder={"Tarefa"} value={task} onChange={(e) => setTask(e.target.value)}/>
+        <Input placeholder={"Descrição da Tarefa"} value={taskDesc} onChange={(e) => setTaskDesc(e.target.value)}/>
+        <Input placeholder={"Defina o tempo limite da tarefa"} value={deadline} onChange={(e) => setDeadline(e.target.value)} onFocus={(event) => event.target.type = 'datetime-local'}/>
+        <Button onClick={handleAddTask} label={"Adicionar"}/>
+        <Column >
+          {tasks.map( taskIndex => (
+              <>
+                <Task task={taskIndex.task} description={taskIndex.desc} />
+                <Timer deadline={taskIndex.timeLimit} />
             </>
-          )}
-        </List>
+          ))}
+
+        </Column>
       </Content>
     </Container>
   );

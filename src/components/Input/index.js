@@ -1,8 +1,9 @@
-import {InputContent} from "./styles"
+import {InputContainer, InputText} from "./styles"
 
-export const Input = ({value, onChange, placeholder}) => {
+export const Input = ({value, onChange, placeholder, type, onFocus}) => {
     return (
-        <InputContent value={value} onChange={onChange} placeholder={placeholder}/>
-       
+        <InputContainer>
+            <InputText value={value} onChange={onChange} placeholder={placeholder} type={type} onFocus={onFocus}/>
+        </InputContainer>
     );
 }
