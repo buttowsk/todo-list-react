@@ -38,7 +38,7 @@ export const TaskBox = styled.div`
   align-items: center;
   margin: 20px 0;
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color: transparent;
+  background-color: rgba(46, 56, 64, 0.3);
   backdrop-filter: blur(15px);
   height: 30vh;
   padding: 2px 20px;

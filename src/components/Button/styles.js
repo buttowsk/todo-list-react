@@ -23,4 +23,5 @@ export const ButtonContent = styled.button`
     color: #4E31AA;
     cursor: pointer;
   }
+  
 `

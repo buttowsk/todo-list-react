@@ -19,7 +19,7 @@ export const Timer = ({deadline, interval = SECOND}) => {
                 <TotalRemaningTimeText>{minutes >= 1 ? minutes : null}</TotalRemaningTimeText>
                 <TimeText>{minutes >= 1 ? "minutes" : null}</TimeText>
                 <TotalRemaningTimeText>{seconds >= 1 ? seconds : null}</TotalRemaningTimeText>
-                <TimeText>{seconds >= 0 ? "seconds" : null}</TimeText>
+                <TimeText>{seconds >= 1 ? "seconds" : null}</TimeText>
             </RemaningTimeBox>
         </Container>
     )

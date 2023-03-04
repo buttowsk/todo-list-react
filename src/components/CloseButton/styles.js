@@ -25,4 +25,9 @@ export const ButtonContent = styled.button`
     color: #F5EAEA;
   }
   
+  &:active {
+    background-color: #FF0303;
+    color: #4E31AA;
+  }
+  
 `
