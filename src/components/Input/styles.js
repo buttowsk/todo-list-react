@@ -13,9 +13,10 @@ export const InputContainer = styled.div`
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 8px;
   background-color: #E3DFFD;
   border-radius: 4px;
+  padding: 2px;
   text-align: center;
 `
 
@@ -36,7 +37,7 @@ export const InputText = styled.input`
   &::-webkit-calendar-picker-indicator {
     background-color: #E3DFFD;
     border-radius: 4px;
-    padding: 4px;
+    padding: 3px;
     cursor: pointer;
   }
 

@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const TopBox = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 30px auto;
   border: 2px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
@@ -63,10 +64,10 @@ export const TaskContent = styled.div`
 `
 
 export const ButtonContainer = styled.div`
-  width: 50%;
+  width: 35%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
 `
 
