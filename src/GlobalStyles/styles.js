@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import {createGlobalStyle} from "styled-components";
+
 export const GlobalStyle = createGlobalStyle`
 
   * {
@@ -8,8 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: url("https://cdn.midjourney.com/9341eabb-879e-4911-9010-6c7632d0f32d/grid_0.png") no-repeat;
-    background-position: center;
+    background: url("https://cdn.midjourney.com/9341eabb-879e-4911-9010-6c7632d0f32d/grid_0.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 `

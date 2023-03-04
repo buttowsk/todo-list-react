@@ -1,39 +1,38 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
 `
 
 export const TopBox = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(15px);
-    height: 30vh;
-    padding: 15px 35px;
-    border-radius: 10px;
-    max-width: 60%;
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  height: 30vh;
+  padding: 15px 35px;
+  border-radius: 10px;
+  max-width: 700px;
 `
 
 export const InputWrapper = styled.div`
-    width: 50%;
-    max-width: 800px;
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
+  width: 50%;
+  max-width: 800px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
 `
 
 export const TaskBox = styled.div`
-  max-width: 30%;
-  min-width: 200px;
+  width: 60%;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,6 +63,7 @@ export const TaskContent = styled.div`
 `
 
 export const ButtonWrapper = styled.div`
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,7 @@ export const ButtonWrapper = styled.div`
 `
 
 export const CloseWrapper = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

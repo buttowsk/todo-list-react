@@ -6,8 +6,7 @@ export const Container = styled.div`
   max-width: 600px;
   align-items: center;
   justify-content: center;
-  margin: 8px 12px;
-  
+  margin: 12px auto;
   * {
     color: #F5EAEA;
   }
@@ -16,22 +15,21 @@ export const Container = styled.div`
 export const RemaningTimeBox = styled.div`
   border-radius: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: rgba(78, 49, 170, 0.3);
-  backdrop-filter: blur(10px);
+  background-color: rgb(78, 49, 170);
 `
 
 export const TotalRemaningTimeText = styled.p`
-  font-size: 12px;
-  margin: 0 8px;
+  font-size: 2vb;
+  margin: 0 auto;
 `
 
 export const TimeText = styled.span`
-  font-size: 12px;
-  margin: 0 8px;
+  font-size: 1vb;
+  margin: 0 auto;
 `

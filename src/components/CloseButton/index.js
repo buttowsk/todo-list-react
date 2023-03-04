@@ -6,6 +6,5 @@ export const CloseButton = ({onClick, label}) => {
                 {label}
             </ButtonContent>
         </ButtonContainer>
-
     );
 }
