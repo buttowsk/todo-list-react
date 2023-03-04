@@ -14,7 +14,7 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: 10px;
-  background-color: #EEEEEE;
+  background-color: #E3DFFD;
   border-radius: 4px;
   text-align: center;
 `
