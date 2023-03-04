@@ -21,7 +21,7 @@ export const TopBox = styled.div`
   max-width: 700px;
 `
 
-export const InputWrapper = styled.div`
+export const InputContainer = styled.div`
   width: 50%;
   max-width: 800px;
   display: flex;
@@ -62,7 +62,7 @@ export const TaskContent = styled.div`
   border-radius: 14px;
 `
 
-export const ButtonWrapper = styled.div`
+export const ButtonContainer = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@ export const ButtonWrapper = styled.div`
   flex-direction: column;
 `
 
-export const CloseWrapper = styled.div`
+export const CloseContainer = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;

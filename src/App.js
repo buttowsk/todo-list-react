@@ -1,4 +1,4 @@
-import {Container, TaskContent, InputWrapper, ButtonWrapper, Row, TopBox, TaskBox, CloseWrapper} from "./styles"
+import {Container, TaskContent, Row, TopBox, TaskBox, InputContainer, ButtonContainer, CloseContainer} from "./styles"
 import {Button} from "./components/Button";
 import {Input} from "./components/Input";
 import {useState} from "react";
@@ -46,30 +46,29 @@ function App() {
         <Container>
             <TopBox>
                 <Row>
-                    <InputWrapper>
+                    <InputContainer>
                         <Input placeholder={"Tarefa"} value={task} onChange={(e) => setTask(e.target.value)} leftIcon={HiOutlineClipboardDocument()}/>
                         <Input placeholder={"Descrição da Tarefa"} value={taskDesc} leftIcon={HiOutlineBookmarkSquare()}
                                onChange={(e) => setTaskDesc(e.target.value)}/>
                         <Input placeholder={"Defina o tempo limite da tarefa"} value={deadline}
                                min={minData} onChange={(e) => setDeadline(e.target.value)}
                                onFocus={(event) => event.target.type = 'datetime-local'}/>
-                    </InputWrapper>
-                    <ButtonWrapper>
+                    </InputContainer>
+                    <ButtonContainer>
                         <Button onClick={handleAddTask} label={"Adicionar"}/>
                         <Button onClick={handleClearAll} label={"Clear list"}/>
-                    </ButtonWrapper>
+                    </ButtonContainer>
                 </Row>
             </TopBox>
 
             {tasks.map(taskIndex => (
                 <TaskBox key={taskIndex.id}>
                     <TaskContent>
-                        <CloseWrapper>
+                        <CloseContainer>
                             <CloseButton onClick={() => handleClearBox(taskIndex)} label={'X'}/>
-                        </CloseWrapper>
+                        </CloseContainer>
                         <Task task={taskIndex.task} description={taskIndex.desc}/>
                         <Timer deadline={taskIndex.timeLimit}/>
-
                     </TaskContent>
                 </TaskBox>
             ))}
