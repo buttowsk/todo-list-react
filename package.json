@@ -1,7 +1,7 @@
 {
   "name": "to-dolist",
   "version": "0.1.0",
-  "homepage": "https://buttowsk.github.io/to-do-list",
+  "homepage": "https://buttowsk.github.io/todo-list-react",
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
